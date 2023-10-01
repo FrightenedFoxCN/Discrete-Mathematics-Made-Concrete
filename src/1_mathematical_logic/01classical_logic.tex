@@ -1,1 +1,167 @@
 \chapter{古典逻辑学的观念}
+
+\begin{quote}
+    Each mortal thing does one thing and the same: \\
+    Deals out that being indoors each one dwells; \\
+    Selves - goes itself; myself it speaks and spells, \\
+    Crying What I do is me: for that I came.
+\flushright{G. M. Hopkins \textit{As kingfishers catch fire}}
+\end{quote}
+
+古典逻辑学的历史我们已经谈了不少了，接下来我们需要谈谈它实质性的内容。当然，这些内容几乎都是近乎常识，但是 Rosen 的书中还是把它专划作一个章节讨论。因此，我们在此也不妨将其单独拎出来作为一讲。这里主要讨论的是命题、逻辑连接词、量词、谓词和范式的问题，同时，真值表的处理方式也被放在这里。
+
+\section{命题}
+
+什么是\keyterm{命题}[proposition]？高中的时候我们就知道，命题是一个或真或假的陈述性语句。比方说，“太阳东升西落”就是一个命题，而“存在一个包含所有不属于自身的集合的集合”就不是一个命题。当然，后半句话有点拿当朝的剑斩前朝的官的意思，因为这个悖论在古典逻辑盛行的时候并没有出现，但既然 Rosen 的书上这么定义，而且有些老师也会这样举例，那我们就姑且承认这不是一个命题。
+
+然后，我们用类似语言哲学家们的方式来处理\keyterm{逻辑连结词}[connective]非：
+
+\begin{definition}
+    设 $p$ 为一命题，则 $\lnot p$ 表示命题“情况并非如此，$p$”（it is not the case that...）。
+\end{definition}
+
+$\lnot p$ 被称为命题 $p$ 的\keyterm{否定}[negation]。“与”和“或”也用类似的方式定义：
+
+\begin{definition}
+    设 $p, q$ 为命题，则 $p \wedge q$ 表示 $p$ 且 $q$，即当且仅当 $p$ 和 $q$ 均为真时它才为真；$p \vee q$ 表示 $p$ 或 $q$，即当且仅当 $p$ 和 $q$ 中至少有一个为真时它才为真。
+\end{definition}
+
+$p \wedge q$ 也被称为 $p$ 和 $q$ 的\keyterm{合取}[conjunction]，$p \vee q$ 则被对应的称为 $p$ 和 $q$ 的\keyterm{析取}[disjunction]。单个的命题 $p$ 和 $q$ 被称为\keyterm{原子命题}[atomic proposition]，它被认为是不可再分的；而由逻辑连接词连接起来的命题则被称为\keyterm{复合命题}[compound proposition]。显然，面对实际问题时，原子命题的选择具备某种程度上的任意性。逻辑连接词又称\keyterm{逻辑运算符}[logical operator]。
+
+现在看来除了术语已经开始复杂化了以外都很顺利，但是，这种连接词的表达方式多少有点不够形式化。因此，我们引入\keyterm{真值表}[truth table]的概念。
+
+\begin{table}[htpb]
+    \caption{逻辑非的真值表}
+    \begin{center}
+    \begin{tabular}{c|c}
+    \hline
+    $p$ & $\lnot p$ \\ \hline
+    $T$ & $F$       \\ \hline
+    $F$ & $T$       \\ \hline
+    \end{tabular}
+    \end{center}
+\end{table}
+
+\begin{table}[htpb]
+    \caption{逻辑与的真值表}
+    \begin{center}
+    \begin{tabular}{c|c|c}
+    \hline
+    $p$ & $q$ & $p \wedge q$ \\ \hline
+    $T$ & $T$ & $T$          \\ \hline
+    $T$ & $F$ & $F$          \\ \hline
+    $F$ & $T$ & $F$          \\ \hline
+    $F$ & $F$ & $F$          \\ \hline
+    \end{tabular}
+    \end{center}
+\end{table}
+
+\begin{table}[htpb]
+    \caption{逻辑或的真值表}
+    \begin{center}
+    \begin{tabular}{c|c|c}
+    \hline
+    $p$ & $q$ & $p \vee q$ \\ \hline
+    $T$ & $T$ & $T$          \\ \hline
+    $T$ & $F$ & $T$          \\ \hline
+    $F$ & $T$ & $T$          \\ \hline
+    $F$ & $F$ & $F$          \\ \hline
+    \end{tabular}
+    \end{center}
+\end{table}
+
+其中左边的一列/两列称为对命题的\keyterm{赋值}[assignment/evaluation]，后边一列则是逻辑连接符运算的结果，$T$ 表示真，$F$ 表示假。这样，我们就能定义一些更加复杂的连接词：
+
+\begin{definition}
+    设 $p, q$ 为命题，则 $p \oplus q$ 表示 $p$ 和 $q$ 的\keyterm{异或}[exclusive or]，它为真当且仅当 $p$ 和 $q$ 中有且仅有一个为真。
+\end{definition}
+
+\begin{table}[htpb]
+    \caption{异或的真值表}
+    \begin{center}
+    \begin{tabular}{c|c|c}
+    \hline
+    $p$ & $q$ & $p \oplus q$ \\ \hline
+    $T$ & $T$ & $F$          \\ \hline
+    $T$ & $F$ & $T$          \\ \hline
+    $F$ & $T$ & $T$          \\ \hline
+    $F$ & $F$ & $F$          \\ \hline
+    \end{tabular}
+    \end{center}
+\end{table}
+
+\begin{definition}
+    设 $p, q$ 为命题，则 $p \to q$ 表示若 $p$ 则 $q$，它为真当且仅当 $p$ 为假或者 $p$ 和 $q$ 均为真。这种式子被称为\keyterm{蕴含式}[implication]或\keyterm{条件句}[conditional statement]，其中 $p$ 称为\keyterm{前提}[premise]、\keyterm{假设}[hypothesis]或\keyterm{前项}[antecedent]，$q$ 称为\keyterm{结论}[conclusion]或\keyterm{结果}[consequence]。
+\end{definition}
+
+\begin{table}[htpb]
+    \caption{蕴含的真值表}
+    \begin{center}
+    \begin{tabular}{c|c|c}
+    \hline
+    $p$ & $q$ & $p \to q$ \\ \hline
+    $T$ & $T$ & $T$          \\ \hline
+    $T$ & $F$ & $F$          \\ \hline
+    $F$ & $T$ & $T$          \\ \hline
+    $F$ & $F$ & $T$          \\ \hline
+    \end{tabular}
+    \end{center}
+\end{table}
+
+这里有一个有趣的问题：当前提为假的时候，结论不管怎么说都是真的。这看起来反直觉，但其实是一个很平常的事情，看下面这句话：
+
+\textit{如果你好好学习，你就不会挂科。}
+
+这句话是真的，哪怕你没有好好学习然后挂科了，或者没有好好学习但没挂科。前提不成立的情况下，任何事实结果都不会影响这个命题是否是真的。在下面这个对话中，这个性质就表现得更加明显了：
+
+\textit{``Can you v me 50?" ``When pigs fly!"}
+
+第二个说话者的意思事实上是绝无此可能。因为猪会飞是一个假命题，所以它使得被省略的命题（\textit{``I can v you 50"}）一定成立，但这是反事实的。这就构成了一个重要的逻辑原则，它被称为 ex falso sequitur quodlibet：从谬误中，你想怎么干就怎么干，形式化地说，对于任意命题 $p$，$F \to p$ 成立。
+
+最后一个逻辑运算符比较简单：
+
+\begin{definition}
+    设 $p, q$ 为命题，则 $p \leftrightarrow q$ 表示 $p$ 当且仅当 $q$，即两者具备相同的真值。我们将其称为\keyterm{双向蕴含式}[biconditional statements/bi-implications]
+\end{definition}
+
+\begin{table}[htpb]
+    \caption{双向蕴含的真值表}
+    \begin{center}
+    \begin{tabular}{c|c|c}
+    \hline
+    $p$ & $q$ & $p \leftrightarrow q$ \\ \hline
+    $T$ & $T$ & $T$          \\ \hline
+    $T$ & $F$ & $F$          \\ \hline
+    $F$ & $T$ & $F$          \\ \hline
+    $F$ & $F$ & $T$          \\ \hline
+    \end{tabular}
+    \end{center}
+\end{table}
+
+我们约定，逻辑运算符的优先级为 $\lnot$ 最高，$\wedge$ 和 $\vee$ 其次，$\to$ 和 $\leftrightarrow$ 最低。因为 $\oplus$ 基本上不会出现，所以我们也可以预设它的有限集和 $\vee$ 一致，但这没什么影响。
+
+在这一小节最后，我们讲讲怎么利用真值表推算复合命题的真值。下面是一个例子：
+
+\begin{table}[htpb]
+    \caption{$(p \vee \lnot q) \to (p \wedge q)$ 的真值表}
+    \begin{center}
+    \begin{tabular}{c|c|c|c|c|c}
+    \hline
+    $p$ & $q$ & $\lnot q$ & $p \vee \lnot q$ & $p \wedge q$ & $(p \vee \lnot q) \to (p \wedge q)$ \\ \hline
+    $T$ & $T$ & $F$ & $T$ & $T$ & $T$ \\ \hline
+    $T$ & $F$ & $T$ & $T$ & $F$ & $F$\\ \hline
+    $F$ & $T$ & $F$ & $F$ & $F$ & $T$ \\ \hline
+    $F$ & $F$ & $T$ & $T$ & $F$ & $F$ \\ \hline
+    \end{tabular}
+    \end{center}
+\end{table}
+
+也就是说，只要逐级把表达式拆开，然后从小到大计算。这样的思路在后面讨论数理逻辑的问题也会碰到，这里其实有一个被称为\keyterm{结构归纳}[structural induction]的方法，留待后面才会得到真正意义上的广泛应用。
+
+\section{日常生活中的命题和逻辑}
+
+\section{命题的等性以及范式}
+
+\section{谓词、量词和一阶逻辑}
+
+\section{推理和证明}

@@ -70,7 +70,13 @@
 \usepackage{hyperref}
 \usepackage{cleveref}
 
-\newenvironment{proof}{\fangsong}{\hspace*{\fill}$\square$\par}
+
+\newtheorem{definition}{定义}[chapter] % 中文
+\newtheorem{example}{例}[chapter]
+\newtheorem{lemma}{引理}[chapter]
+\newtheorem{theorem}{定理}[chapter]
+\newtheorem{corollary}{推论}[chapter]
+\newenvironment{proof}{{\noindent\bfseries\heiti 证明}\quad\fangsong}{\hfill$\square$\par}
 \newenvironment{solution}{\fangsong}{\par}
 
 \renewcommand{\figureautorefname}{图}
@@ -84,8 +90,6 @@
 \newcommand{\definitionautorefname}{定义}
 \crefrangeformat{equation}{式~#3#1#4--#5#2#6}
 \crefrangeformat{example}{例~#3#1#4--#5#2#6}
-
-\DeclareMathOperator{\diag}{diag}
 
 \title{Discrete Mathematics Made Concrete}
 \author{FrightenedFoxCN \quad frightenedfox@outlook.com}
@@ -113,29 +117,29 @@
 \input{./1_mathematical_logic/00preface.tex}
 \input{./1_mathematical_logic/01classical_logic.tex}
 
-\setcounter{chapter}{0}
-\input{./2_algorithm_and_computation/00preface.tex}
+% \setcounter{chapter}{0}
+% \input{./2_algorithm_and_computation/00preface.tex}
 
-\setcounter{chapter}{0}
-\input{./3_discrete_structures/00preface.tex}
+% \setcounter{chapter}{0}
+% \input{./3_discrete_structures/00preface.tex}
 
-\setcounter{chapter}{0}
-\input{./4_discrete_dynamical_system/00preface.tex}
+% \setcounter{chapter}{0}
+% \input{./4_discrete_dynamical_system/00preface.tex}
 
-\setcounter{chapter}{0}
-\input{./5_combinatorics/00preface.tex}
+% \setcounter{chapter}{0}
+% \input{./5_combinatorics/00preface.tex}
 
-\setcounter{chapter}{0}
-\input{./6_probablistics/00preface.tex}
+% \setcounter{chapter}{0}
+% \input{./6_probablistics/00preface.tex}
 
-\setcounter{chapter}{0}
-\input{./7_graphs/00preface.tex}
+% \setcounter{chapter}{0}
+% \input{./7_graphs/00preface.tex}
 
-\setcounter{chapter}{0}
-\input{./8_coding_and_cryptology/00preface.tex}
+% \setcounter{chapter}{0}
+% \input{./8_coding_and_cryptology/00preface.tex}
 
-\setcounter{chapter}{0}
-\input{./9_discrete_geometry/00preface.tex}
+% \setcounter{chapter}{0}
+% \input{./9_discrete_geometry/00preface.tex}
 
 \backmatter
 \pdfbookmark[0]{索引}{index}
