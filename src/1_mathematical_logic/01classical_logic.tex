@@ -8,27 +8,27 @@
 \flushright{G. M. Hopkins \textit{As kingfishers catch fire}}
 \end{quote}
 
-古典逻辑学的历史我们已经谈了不少了，接下来我们需要谈谈它实质性的内容。当然，这些内容几乎都是近乎常识，但是 Rosen 的书中还是把它专划作一个章节讨论。因此，我们在此也不妨将其单独拎出来作为一讲。这里主要讨论的是命题、逻辑连接词、量词、谓词和范式的问题，同时，真值表的处理方式也被放在这里。
+古典逻辑学的历史我们已经谈了不少了，接下来我们需要谈谈它实质性的内容. 当然，这些内容几乎都是近乎常识，但是 Rosen 的书中还是把它专划作一个章节讨论. 因此，我们在此也不妨将其单独拎出来作为一讲. 这里主要讨论的是命题、逻辑连接词、量词、谓词和范式的问题，同时，真值表的处理方式也被放在这里. 
 
 \section{命题}
 
-什么是\keyterm{命题}[proposition]？高中的时候我们就知道，命题是一个或真或假的陈述性语句。比方说，“太阳东升西落”就是一个命题，而“存在一个包含所有不属于自身的集合的集合”就不是一个命题。当然，后半句话有点拿当朝的剑斩前朝的官的意思，因为这个悖论在古典逻辑盛行的时候并没有出现，但既然 Rosen 的书上这么定义，而且有些老师也会这样举例，那我们就姑且承认这不是一个命题。
+什么是\keyterm{命题}[proposition]？高中的时候我们就知道，命题是一个或真或假的陈述性语句. 比方说，“太阳东升西落”就是一个命题，而“存在一个包含所有不属于自身的集合的集合”就不是一个命题. 当然，后半句话有点拿当朝的剑斩前朝的官的意思，因为这个悖论在古典逻辑盛行的时候并没有出现，但既然 Rosen 的书上这么定义，而且有些老师也会这样举例，那我们就姑且承认这不是一个命题. 
 
 然后，我们用类似语言哲学家们的方式来处理\keyterm{逻辑连结词}[connective]非：
 
 \begin{definition}
-    设 $p$ 为一命题，则 $\lnot p$ 表示命题“情况并非如此，$p$”（it is not the case that...）。
+    设 $p$ 为一命题，则 $\lnot p$ 表示命题“情况并非如此，$p$”（it is not the case that...）. 
 \end{definition}
 
-$\lnot p$ 被称为命题 $p$ 的\keyterm{否定}[negation]。“与”和“或”也用类似的方式定义：
+$\lnot p$ 被称为命题 $p$ 的\keyterm{否定}[negation]. “与”和“或”也用类似的方式定义：
 
 \begin{definition}
-    设 $p, q$ 为命题，则 $p \wedge q$ 表示 $p$ 且 $q$，即当且仅当 $p$ 和 $q$ 均为真时它才为真；$p \vee q$ 表示 $p$ 或 $q$，即当且仅当 $p$ 和 $q$ 中至少有一个为真时它才为真。
+    设 $p, q$ 为命题，则 $p \wedge q$ 表示 $p$ 且 $q$，即当且仅当 $p$ 和 $q$ 均为真时它才为真；$p \vee q$ 表示 $p$ 或 $q$，即当且仅当 $p$ 和 $q$ 中至少有一个为真时它才为真. 
 \end{definition}
 
-$p \wedge q$ 也被称为 $p$ 和 $q$ 的\keyterm{合取}[conjunction]，$p \vee q$ 则被对应的称为 $p$ 和 $q$ 的\keyterm{析取}[disjunction]。单个的命题 $p$ 和 $q$ 被称为\keyterm{原子命题}[atomic proposition]，它被认为是不可再分的；而由逻辑连接词连接起来的命题则被称为\keyterm{复合命题}[compound proposition]。显然，面对实际问题时，原子命题的选择具备某种程度上的任意性。逻辑连接词又称\keyterm{逻辑运算符}[logical operator]。
+$p \wedge q$ 也被称为 $p$ 和 $q$ 的\keyterm{合取}[conjunction]，$p \vee q$ 则被对应的称为 $p$ 和 $q$ 的\keyterm{析取}[disjunction]. 单个的命题 $p$ 和 $q$ 被称为\keyterm{原子命题}[atomic proposition]，它被认为是不可再分的；而由逻辑连接词连接起来的命题则被称为\keyterm{复合命题}[compound proposition]. 显然，面对实际问题时，原子命题的选择具备某种程度上的任意性. 逻辑连接词又称\keyterm{逻辑运算符}[logical operator]. 
 
-现在看来除了术语已经开始复杂化了以外都很顺利，但是，这种连接词的表达方式多少有点不够形式化。因此，我们引入\keyterm{真值表}[truth table]的概念。
+现在看来除了术语已经开始复杂化了以外都很顺利，但是，这种连接词的表达方式多少有点不够形式化. 因此，我们引入\keyterm{真值表}[truth table]的概念. 
 
 \begin{table}[htpb]
     \caption{逻辑非的真值表}
@@ -70,10 +70,10 @@ $p \wedge q$ 也被称为 $p$ 和 $q$ 的\keyterm{合取}[conjunction]，$p \vee
     \end{center}
 \end{table}
 
-其中左边的一列/两列称为对命题的\keyterm{赋值}[assignment/evaluation]，后边一列则是逻辑连接符运算的结果，$T$ 表示真，$F$ 表示假。这样，我们就能定义一些更加复杂的连接词：
+其中左边的一列/两列称为对命题的\keyterm{赋值}[assignment/evaluation]，后边一列则是逻辑连接符运算的结果，$T$ 表示真，$F$ 表示假. 这样，我们就能定义一些更加复杂的连接词：
 
 \begin{definition}
-    设 $p, q$ 为命题，则 $p \oplus q$ 表示 $p$ 和 $q$ 的\keyterm{异或}[exclusive or]，它为真当且仅当 $p$ 和 $q$ 中有且仅有一个为真。
+    设 $p, q$ 为命题，则 $p \oplus q$ 表示 $p$ 和 $q$ 的\keyterm{异或}[exclusive or]，它为真当且仅当 $p$ 和 $q$ 中有且仅有一个为真. 
 \end{definition}
 
 \begin{table}[htpb]
@@ -91,7 +91,7 @@ $p \wedge q$ 也被称为 $p$ 和 $q$ 的\keyterm{合取}[conjunction]，$p \vee
 \end{table}
 
 \begin{definition}
-    设 $p, q$ 为命题，则 $p \to q$ 表示若 $p$ 则 $q$，它为真当且仅当 $p$ 为假或者 $p$ 和 $q$ 均为真。这种式子被称为\keyterm{蕴含式}[implication]或\keyterm{条件句}[conditional statement]，其中 $p$ 称为\keyterm{前提}[premise]、\keyterm{假设}[hypothesis]或\keyterm{前项}[antecedent]，$q$ 称为\keyterm{结论}[conclusion]或\keyterm{结果}[consequence]。
+    设 $p, q$ 为命题，则 $p \to q$ 表示若 $p$ 则 $q$，它为真当且仅当 $p$ 为假或者 $p$ 和 $q$ 均为真. 这种式子被称为\keyterm{蕴含式}[implication]或\keyterm{条件句}[conditional statement]，其中 $p$ 称为\keyterm{前提}[premise]、\keyterm{假设}[hypothesis]或\keyterm{前项}[antecedent]，$q$ 称为\keyterm{结论}[conclusion]或\keyterm{结果}[consequence]. 
 \end{definition}
 
 \begin{table}[htpb]
@@ -108,20 +108,20 @@ $p \wedge q$ 也被称为 $p$ 和 $q$ 的\keyterm{合取}[conjunction]，$p \vee
     \end{center}
 \end{table}
 
-这里有一个有趣的问题：当前提为假的时候，结论不管怎么说都是真的。这看起来反直觉，但其实是一个很平常的事情，看下面这句话：
+这里有一个有趣的问题：当前提为假的时候，结论不管怎么说都是真的. 这看起来反直觉，但其实是一个很平常的事情，看下面这句话：
 
-\textit{如果你好好学习，你就不会挂科。}
+\textit{如果你好好学习，你就不会挂科. }
 
-这句话是真的，哪怕你没有好好学习然后挂科了，或者没有好好学习但没挂科。前提不成立的情况下，任何事实结果都不会影响这个命题是否是真的。在下面这个对话中，这个性质就表现得更加明显了：
+这句话是真的，哪怕你没有好好学习然后挂科了，或者没有好好学习但没挂科. 前提不成立的情况下，任何事实结果都不会影响这个命题是否是真的. 在下面这个对话中，这个性质就表现得更加明显了：
 
 \textit{``Can you v me 50?" ``When pigs fly!"}
 
-第二个说话者的意思事实上是绝无此可能。因为猪会飞是一个假命题，所以它使得被省略的命题（\textit{``I can v you 50"}）一定成立，但这是反事实的。这就构成了一个重要的逻辑原则，它被称为 ex falso sequitur quodlibet：从谬误中，你想怎么干就怎么干，形式化地说，对于任意命题 $p$，$F \to p$ 成立。
+第二个说话者的意思事实上是绝无此可能. 因为猪会飞是一个假命题，所以它使得被省略的命题（\textit{``When pigs fly, I can v you 50"}）一定成立，但这是反事实的. 这就构成了一个重要的逻辑原则，它被称为 ex falso sequitur quodlibet：从谬误中，你想怎么干就怎么干，形式化地说，对于任意命题 $p$，$F \to p$ 成立. 
 
 最后一个逻辑运算符比较简单：
 
 \begin{definition}
-    设 $p, q$ 为命题，则 $p \leftrightarrow q$ 表示 $p$ 当且仅当 $q$，即两者具备相同的真值。我们将其称为\keyterm{双向蕴含式}[biconditional statements/bi-implications]
+    设 $p, q$ 为命题，则 $p \leftrightarrow q$ 表示 $p$ 当且仅当 $q$，即两者具备相同的真值. 我们将其称为\keyterm{双向蕴含式}[biconditional statements/bi-implications]
 \end{definition}
 
 \begin{table}[htpb]
@@ -138,9 +138,13 @@ $p \wedge q$ 也被称为 $p$ 和 $q$ 的\keyterm{合取}[conjunction]，$p \vee
     \end{center}
 \end{table}
 
-我们约定，逻辑运算符的优先级为 $\lnot$ 最高，$\wedge$ 和 $\vee$ 其次，$\to$ 和 $\leftrightarrow$ 最低。因为 $\oplus$ 基本上不会出现，所以我们也可以预设它的有限集和 $\vee$ 一致，但这没什么影响。
+我们约定，逻辑运算符的优先级为 $\lnot$ 最高，$\wedge$ 和 $\vee$ 其次，$\to$ 和 $\leftrightarrow$ 最低. 因为 $\oplus$ 基本上不会出现，所以我们也可以预设它的有限集和 $\vee$ 一致，但这没什么影响. 下面几个概念事关命题的真值：
 
-在这一小节最后，我们讲讲怎么利用真值表推算复合命题的真值。下面是一个例子：
+\begin{definition}
+    称一个命题是\keyterm{重言式}[tautology]如果它对于任意指派都是真的；称其为\keyterm{矛盾式}[contradiction]如果它对于任意指派都是假的；称其为\keyterm{可能式}[contingency]如果它既不是重言式，也不是矛盾式. 重言式又称永真式，矛盾式又称永假式，重言式和可能式统称为\keyterm{可满足的}[satisfiable]. 
+\end{definition}
+
+在这一小节最后，我们讲讲怎么利用真值表推算复合命题的真值，判断其为重言式、矛盾式还是可能式. 下面是一个例子：
 
 \begin{table}[htpb]
     \caption{$(p \vee \lnot q) \to (p \wedge q)$ 的真值表}
@@ -156,12 +160,183 @@ $p \wedge q$ 也被称为 $p$ 和 $q$ 的\keyterm{合取}[conjunction]，$p \vee
     \end{center}
 \end{table}
 
-也就是说，只要逐级把表达式拆开，然后从小到大计算。这样的思路在后面讨论数理逻辑的问题也会碰到，这里其实有一个被称为\keyterm{结构归纳}[structural induction]的方法，留待后面才会得到真正意义上的广泛应用。
-
-\section{日常生活中的命题和逻辑}
+也就是说，只要逐级把表达式拆开，然后从小到大计算. 这样的思路在后面讨论数理逻辑的问题也会碰到，这里其实有一个被称为\keyterm{结构归纳}[structural induction]的方法，留待后面才会得到真正意义上的广泛应用. 
 
 \section{命题的等性以及范式}
 
+从这里开始，我们需要考虑两种东西：命题内部的运算，以及命题与命题之间的关系. 前者就是如上所述的连接词，后者则被我们称为``元命题''的连接词. 下面我们要定义第一个元命题的连接词：（语义）等价.
+
+\begin{definition}
+    称两个命题 $p$ 和 $q$ 是\keyterm{语义等价}[semantically equivalent]的，如果 $p \leftrightarrow q$ 为重言式，记作 $p \equiv q$，简称\keyterm{等价}[equivalent]. 
+\end{definition}
+
+容易验证：$\equiv$ 是一个等价关系，即它具备自反性、对称性和传递性. 这个结论的验证只需观察 $p \leftrightarrow q$ 的真值表即可. 当然，如果不在意命题和元命题的区别，在这里可能就会有点犯迷糊了. 下面我们要给出第一个重要的元命题，作为例子：
+
+\begin{theorem}[de Morgen]
+    \[
+        \lnot (p \wedge q) \equiv \lnot p \vee \lnot q, \quad \lnot (p \vee q) \equiv \lnot p \wedge \lnot q    
+    \]
+\end{theorem}
+
+验证类似的定理有两种方法，一种是利用已经建立的元命题，另一种是利用真值表. 鉴于这是我们建立的第一个元命题，我们给出真值表的证明：
+
+\begin{proof}
+    我们只证第一个等式：
+
+    \begin{table}[htpb]
+        \caption{$\lnot (p \wedge q) \leftrightarrow \lnot p \vee \lnot q$ 的真值表}
+        \begin{center}
+        \begin{tabular}{c|c|c|c|c|c|c|c}
+        \hline
+        $p$ & $q$ & $p \wedge q$ & $\lnot (p \wedge q)$ & $\lnot p$ & $\lnot q$ & $\lnot p \vee \lnot q$ & $\lnot (p \wedge q) \leftrightarrow \lnot p \vee \lnot q$ \\ \hline
+        $T$ & $T$ & $T$ & $F$ & $F$ & $F$ & $F$ & $T$ \\ \hline
+        $T$ & $F$ & $F$ & $T$ & $F$ & $T$ & $T$ & $T$ \\ \hline
+        $F$ & $T$ & $F$ & $T$ & $T$ & $F$ & $T$ & $T$ \\ \hline
+        $F$ & $F$ & $F$ & $T$ & $T$ & $T$ & $T$ & $T$ \\ \hline
+        \end{tabular}
+        \end{center}
+    \end{table}
+
+    这里我们的证明策略就是把元命题转化成命题. 当然，实际上为了简明起见，包括我们的教科书中，都会直接写出左半边的真值表和右半边的真值表，然后对比发现它们相等，完成证明，读者亦可自由地采取这种方法. 
+\end{proof}
+
+第二个定理实际上可以看成一种公理，不过它在我们的语境下还是一个定理. 为了明确表达它的含义，需要用到\keyterm{项}[term]和\keyterm{子项}[subterm]的概念，但是，我们仅给出一个描述，它应当是非常符合直觉的：
+
+\begin{theorem}
+    如果命题 $p_1$ 是命题 $p$ 的一部分，且 $p_1 \equiv p_2$，将 $p$ 中的 $p_1$ 替换成 $p_2$ 得到 $p'$，则 $p \equiv p'$. 
+\end{theorem}
+
+这个命题的证明用到结构归纳法，在此仅稍作叙述，容后介绍了一些模型论的语言再做详细证明. 我们对 $p$ 的结构做归纳，如果 $p$ 是原子命题，那么 $p_1$ 只能是它自身，由 $\equiv$ 的传递性和自反性得证；如果它是由 $p_1$ 经过某些逻辑连接词连接起来的，分别证明逻辑连接词的左侧、右侧替换之后真值相同，这样按照``从大结构往小结构分拆''的方式，可以得到结果. 
+
+实际上，如果不考虑严格证明，这个事情是非常直观的. 这就相当于，我们改变了一部分的形式而没有改变语义——这就是语义等价这里所谓``语义''的来源，它和``语法''对立，前者指其真值，后者指其在形式上的表达，比方说下面两句话是一样的：
+
+\textit{吃早饭了没？}
+
+\textit{早饭吃了没？}
+
+这里它传达的东西就是语义，而其格式（是否倒装）就是语法. 类似地，命题之间连接的形式就是语法，而它的真值就是语义. 因此，语义等价比语法等价（所有连接词和次序完全一致）要来得强，这是很直观的. 
+
+有了元命题，我们才可以去说命题连接词具备某些性质：逻辑与、逻辑或具备交换律和结合律；逻辑与对逻辑或、逻辑或对逻辑与都分配；双重否定表达肯定；蕴含可以写成或和非的形式……这些东西都是清晰的，完整表列见 Rosen 的书第 29 页表 6，在此不做详述. 
+
+接下来，很自然的一个问题是，能不能把逻辑表达式写成语义等价的某种标准形式？或者，用更加数学的语言来说，能否在语义等价划定的等价类中选取代表元，使得我们能体系化地将一个命题转化到代表元？读者不妨类比线性代数所谓的标准型，这样的思路在数学中是一脉相承的. 
+
+现在，我们的第一个问题是：需要多少个命题连接词？因为最直观的想法就是，既然逻辑表达式的复杂性部分来源于命题连接词，那么就减少命题连接词的数量. 注意到，逻辑与可以用逻辑或和逻辑非替代，反过来逻辑或可以用逻辑与和逻辑非替代；蕴含可以用逻辑或和逻辑非替代，双向蕴含可以用蕴含和逻辑与替代. 总而言之，只需要逻辑或和逻辑非，或者逻辑与和逻辑非就可以替代掉其他所有逻辑连接词. 这种组合被称为一组\keyterm{基}[basis]，而如果它能表达出所有逻辑表达式，我们就称它是\keyterm{完备的}[complete]. 但是，这里的基就没有线性代数里那么好的性质了，我们还有其他的基，可以由一个连接词构成：
+
+\begin{example}
+    定义与非：
+    \[
+        p \mathop{|} q :\equiv \lnot(p \wedge q)    
+    \]
+    它自身构成一个完备的基. 
+\end{example}
+
+\begin{proof}
+    只需用它构造出非和与即可. 首先注意到
+    \[
+        p \mathop{|} p \equiv \lnot(p \wedge p) \equiv \lnot p
+    \]
+    然后与的构造无非是：
+    \[
+        \lnot (p \mathop{|} q) \equiv \lnot \lnot (p \wedge q) \equiv p \wedge q    
+    \]
+\end{proof}
+
+\begin{exercise}
+    证明或非：
+    \[
+        p \mathop{\downarrow} q :\equiv \lnot (p \vee q)    
+    \]
+    也构成一个完备的基. 
+\end{exercise}
+
+但是，哪怕只取一个单元素的基，还是会有麻烦的事情发生. 比如说下面这个等式：
+\[
+    [(p \mathop{|} q) \mathop{|} (p \mathop{|} q)] \mathop{|} [(p \mathop{|} q) \mathop{|} (p \mathop{|} q)] \equiv p \mathop{|} q
+\]
+读者不难验证它成立，事实上它只是对与非的定义式按照我们证明时的构造展开. 但是，在看到左边的式子的五秒钟内，你能发现它就是右边的式子吗？这是非常值得怀疑的. 因此，减少命题连接词的个数并不是长久之计，因为这意味着引入更多复杂的记号和等式. 
+
+换个思路，既然 de Morgen 律告诉我们的东西是，一个复合命题的非可以被拆成两个原子命题的非，那么我们不妨\textit{只允许对原子命题取非}. 也就是说，现在我们的表达式一定不能再用 de Morgen 律分解了. 这样的原子非加上逻辑与和逻辑或显然是完备的，但是，与和或之间的分配律要求我们施加另一个限制，这个限制是稍带些对偶意味的：
+
+\begin{definition}
+    称一个复合命题是析取式（切转：合取式），如果它是由有限个原子命题或原子命题的否定的析取（切转：合取）构成的. 
+\end{definition}
+
+\begin{definition}
+    称一个析取式（切转：合取式）是\keyterm{极大项}[maxterm]（切转：\keyterm{极小项}[minterm]），如果其中的每个原子命题都恰出现了一次（同时出现它和它的否定算出现了两次）. 
+\end{definition}
+
+\begin{definition}
+    称一个命题是\keyterm{析取范式}[disjunctive normal form, DNF]（切转：\keyterm{合取范式}[conjunctive normal form, CNF]）的，如果它是有限个合取式（切转：析取式）的析取（切转：合取）. 
+\end{definition}
+
+\begin{definition}
+    称一个命题是\keyterm{主析取范式}[principal disjunctive normal form, DNF]（切转：\keyterm{主合取范式}[principal conjunctive normal form, CNF]）的，如果它是有限个相异的极小项（切转：极大项）的析取（切转：合取）. 
+\end{definition}
+
+当然，只要对照定义就可发现，合取式和析取式都既是合取范式也是析取范式. 不妨来看一个例子：
+
+\begin{example}
+    求
+    \[
+        ((p \vee q) \to r) \to p
+    \]
+    的合取范式、析取范式和主合取范式、主析取范式. 
+\end{example}
+
+\begin{solution}
+    一般的求解过程分成三步：
+
+    第一步，我们需要消除蕴含：
+    \[
+        ((p \vee q) \to r) \to p \equiv \lnot ((p \vee q) \to r) \vee p \equiv \lnot (\lnot (p \vee q) \vee r) \vee p
+    \]
+    第二步，用 de Morgen 律和双重否定律将非全部转移到原子命题上去：
+    \[
+        \lnot (\lnot (p \vee q) \vee r) \vee p \equiv (\lnot \lnot (p \vee q) \wedge \lnot r) \vee p \equiv ((p \vee q) \wedge \lnot r) \vee p
+    \]
+    接下来的操作就按照需求的范式而定了，其主体都是来回利用分配律. 首先我们求合取范式，因为这个比较简单：
+    \[
+        ((p \vee q) \wedge \lnot r) \vee p \equiv (p \vee q \vee p) \wedge (\lnot r \vee p) 
+    \]
+    再稍作消除和补充得到主合取范式：
+    \[
+        (p \vee q \vee p) \wedge (\lnot r \vee p) \equiv (p \vee q) \wedge (\lnot r \vee p) \equiv (p \vee q \vee r) \wedge (p \vee q \vee \lnot r) \wedge (p \vee \lnot q \vee \lnot r) 
+    \]
+    接下来求析取范式：
+    \[
+        ((p \vee q) \wedge \lnot r) \vee p \equiv (p  \wedge \lnot r) \vee (q \wedge \lnot r) \vee p
+    \]
+    主析取范式则是：
+    \[
+        (p  \wedge q \wedge \lnot r) \vee (p  \wedge \lnot q \wedge \lnot r) \vee (p \wedge q \wedge r) \vee (p \wedge \lnot q \wedge r) \vee (\lnot p \wedge q \wedge \lnot r)
+    \]
+\end{solution}
+
+注意，无论是析取范式还是合取范式，它们都不是\keyterm{典范的}[canonical]. 这意味着，存在多个满足条件的表达式. 但是，主析取范式和主合取范式是典范的，它们在置换下唯一，因此它们也被分别成为\keyterm{典范析取范式}[canonical disjunctive normal form, CDNF]和\keyterm{典范合取范式}[canonical conjunctive normal form, CCNF]. 
+
+注意到，CDNF 和 CCNF 之间的转变其实没那么麻烦，我们重写一下上面的例子，给定 CCNF：
+
+\begin{example}
+    求
+    \[
+        (p \vee q \vee r) \wedge (p \vee q \vee \lnot r) \wedge (p \vee \lnot q \vee \lnot r) 
+    \]
+    的主析取范式. 
+\end{example}
+
+\begin{solution}
+    首先注意到，求 CCNF/CDNF 的逻辑非是一个非常简单的操作，不过是把没有纳入在内的可能极大项/极小项挑出来. 因此，我们考虑对它取两次补，并利用 de Morgen 律，如下所示：
+    \begin{align*}
+        & (p \vee q \vee r) \wedge (p \vee q \vee \lnot r) \wedge (p \vee \lnot q \vee \lnot r)  \\
+        =& \lnot \lnot ((p \vee q \vee r) \wedge (p \vee q \vee \lnot r) \wedge (p \vee \lnot q \vee \lnot r)) \\
+        =& \lnot ((\lnot p \wedge \lnot q \wedge \lnot r) \vee (\lnot p \wedge \lnot q \wedge r) \vee (\lnot p \wedge q \wedge r)) \\
+        =& (p  \wedge q \wedge \lnot r) \vee (p  \wedge \lnot q \wedge \lnot r) \vee (p \wedge q \wedge r) \vee (p \wedge \lnot q \wedge r) \vee (\lnot p \wedge q \wedge \lnot r)
+    \end{align*}
+    这和直接计算给出的结果是一致的. 
+\end{solution}
+
 \section{谓词、量词和一阶逻辑}
+
+\section{日常生活中的命题和逻辑}
 
 \section{推理和证明}
